@@ -27,9 +27,9 @@ short and long options.
   <email>cellog@php.net</email>
   <active>yes</active>
  </helper>
- <date>2007-02-17</date>
+ <date>2007-06-12</date>
  <version>
-  <release>1.2.2</release>
+  <release>1.2.3</release>
   <api>1.2.1</api>
  </version>
  <stability>
@@ -38,8 +38,7 @@ short and long options.
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
- * fix Bug #4475: An ambiguous error occurred when specifying similar longoption name.
- * fix Bug #10055: Not failing properly on short options missing required values
+ * fix Bug #11068: No way to read plain &quot;-&quot; option [cardoe]
  </notes>
  <contents>
   <dir name="/">
@@ -66,6 +65,22 @@ short and long options.
  </dependencies>
  <phprelease />
  <changelog>
+  <release>
+   <version>
+    <release>1.2.2</release>
+    <api>1.2.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2007-02-17</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+ * fix Bug #4475: An ambiguous error occurred when specifying similar longoption name.
+ * fix Bug #10055: Not failing properly on short options missing required values
+   </notes>
+  </release>
   <release>
    <version>
     <release>1.2.1</release>

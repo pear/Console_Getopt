@@ -127,6 +127,10 @@ class Console_Getopt {
                 $error = Console_Getopt::_parseLongOption(substr($arg, 2), $long_options, $opts, $args);
                 if (PEAR::isError($error))
                     return $error;
+            } elseif ($arg == '-') {
+                // - is stdin
+                $non_opts = array_merge($non_opts, array_slice($args, $i));
+                break;
             } else {
                 $error = Console_Getopt::_parseShortOption(substr($arg, 1), $short_options, $opts, $args);
                 if (PEAR::isError($error))
