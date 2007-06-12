@@ -1,5 +1,5 @@
 --TEST--
-Console_Getopt
+Console_Getopt [bug 10557]
 --SKIPIF--
 --FILE--
 <?php
