@@ -27,10 +27,10 @@ short and long options.
   <email>cellog@php.net</email>
   <active>yes</active>
  </helper>
- <date>2007-06-12</date>
+ <date>2010-12-12</date>
  <version>
-  <release>1.2.3</release>
-  <api>1.2.1</api>
+  <release>1.2.4</release>
+  <api>1.2.4</api>
  </version>
  <stability>
   <release>stable</release>
@@ -38,7 +38,7 @@ short and long options.
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
- * fix Bug #11068: No way to read plain &quot;-&quot; option [cardoe]
+ * Implement Request #13140: [PATCH] to skip unknown parameters. [rquadling ]
  </notes>
  <contents>
   <dir name="/">
@@ -65,6 +65,21 @@ short and long options.
  </dependencies>
  <phprelease />
  <changelog>
+  <release>
+    <date>2007-06-12</date>
+     <version>
+      <release>1.2.3</release>
+      <api>1.2.1</api>
+     </version>
+     <stability>
+      <release>stable</release>
+      <api>stable</api>
+     </stability>
+     <license uri="http://www.php.net/license">PHP License</license>
+     <notes>
+     * fix Bug #11068: No way to read plain &quot;-&quot; option [cardoe]
+     </notes>
+  </release>
   <release>
    <version>
     <release>1.2.2</release>
@@ -136,7 +151,7 @@ short and long options.
    <license uri="http://www.php.net/license">PHP License</license>
    <notes>POSIX getopt compatibility fix: treat first element of args
         array as command name
-      
+
    </notes>
   </release>
   <release>
