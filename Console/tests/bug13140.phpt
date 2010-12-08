@@ -4,7 +4,7 @@ Console_Getopt [bug 13140]
 --FILE--
 <?php
 $_SERVER['argv'] = $argv =
-    array('--bob', '--foo' , '-bar', '--test', '-rq');
+    array('--bob', '--foo' , '-bar', '--test', '-rq', 'thisshouldbehere');
 
 require_once 'Console/Getopt.php';
 $cg = new Console_GetOpt();
@@ -27,6 +27,7 @@ Array
 
     [1] => Array
         (
+            [0] => thisshouldbehere
         )
 
 )
@@ -68,6 +69,7 @@ Array
 
     [1] => Array
         (
+            [0] => thisshouldbehere
         )
 
 )

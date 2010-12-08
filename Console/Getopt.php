@@ -143,11 +143,6 @@ class Console_Getopt
             }
 
             if ($arg{0} != '-' || (strlen($arg) > 1 && $arg{1} == '-' && !$long_options)) {
-                if ($skip_unknown === true) {
-                    $non_opts = array_merge($non_opts, array_slice($args, $i + 1, 1, true));
-                    continue;
-                }
-
                 $non_opts = array_merge($non_opts, array_slice($args, $i));
                 break;
             } elseif (strlen($arg) > 1 && $arg{1} == '-') {
@@ -190,7 +185,7 @@ class Console_Getopt
      * @access private
      * @return void
      */
-    function _parseShortOption($arg, $short_options, &$opts, &$args, $skip_unknown = false)
+    function _parseShortOption($arg, $short_options, &$opts, &$args, $skip_unknown)
     {
         for ($i = 0; $i < strlen($arg); $i++) {
             $opt     = $arg{$i};
