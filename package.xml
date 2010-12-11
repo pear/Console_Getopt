@@ -29,8 +29,8 @@ short and long options.
  </helper>
  <date>2010-12-12</date>
  <version>
-  <release>1.2.4</release>
-  <api>1.2.4</api>
+  <release>1.3.0</release>
+  <api>1.3.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -38,7 +38,7 @@ short and long options.
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
- * Implement Request #13140: [PATCH] to skip unknown parameters. [rquadling ]
+ * Implement Request #13140: [PATCH] to skip unknown parameters. [patch by rquadling, improved on by dufuz]
  </notes>
  <contents>
   <dir name="/">
@@ -51,7 +51,7 @@ short and long options.
   <name>PEAR</name>
   <channel>pear.php.net</channel>
   <min>1.4.0</min>
-  <max>1.6.0</max>
+  <max>1.10.0</max>
  </compatible>
  <dependencies>
   <required>
@@ -59,7 +59,7 @@ short and long options.
     <min>4.3.0</min>
    </php>
    <pearinstaller>
-    <min>1.4.3</min>
+    <min>1.9.1</min>
    </pearinstaller>
   </required>
  </dependencies>
