@@ -5,7 +5,6 @@ skip
 --FILE--
 <?php
 
-error_reporting(E_ALL);
 chdir(dirname(__FILE__));
 include "../Getopt.php";
 PEAR::setErrorHandling(PEAR_ERROR_PRINT, "%s\n\n");
