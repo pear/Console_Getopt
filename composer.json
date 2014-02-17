@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Console_Getopt": "./"
+            "Console": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/Console_Getopt",
