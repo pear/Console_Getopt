@@ -33,7 +33,7 @@
     },
     "type": "library",
     "require": {
-        "pear/pear_exception": "*"
+        "pear/pear_exception": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
