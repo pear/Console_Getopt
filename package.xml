@@ -33,7 +33,7 @@ short and long options.</description>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license uri="http://www.php.net/license">PHP License</license>
+ <license uri="http://www.php.net/license">BSD-2-Clause</license>
  <notes>
 * Change the minimum PEAR installer dep to be lower
  </notes>
