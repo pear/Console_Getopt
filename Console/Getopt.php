@@ -220,11 +220,11 @@ class Console_Getopt
                         if (Console_Getopt::_isShortOpt($opt_arg)
                             || Console_Getopt::_isLongOpt($opt_arg)) {
                             $msg = "option requires an argument --$opt";
-                            return PEAR::raiseError("Console_Getopt:" . $msg);
+                            return PEAR::raiseError("Console_Getopt: " . $msg);
                         }
                     } else {
                         $msg = "option requires an argument --$opt";
-                        return PEAR::raiseError("Console_Getopt:" . $msg);
+                        return PEAR::raiseError("Console_Getopt: " . $msg);
                     }
                 }
             }

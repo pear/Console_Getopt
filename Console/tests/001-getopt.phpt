@@ -1,7 +1,5 @@
 --TEST--
 Console_Getopt
---SKIPIF--
-skip
 --FILE--
 <?php
 
@@ -58,7 +56,7 @@ params: bar, gazonk
 options: a=, b=, c=
 params: 
 
-Console_Getopt: option requires an argument -- c
+Console_Getopt: option requires an argument --c
 
 options: a=, b=c
 params: 
