@@ -9,7 +9,7 @@ short and long options.</description>
   <name>Andrei Zmievski</name>
   <user>andrei</user>
   <email>andrei@php.net</email>
-  <active>yes</active>
+  <active>no</active>
  </lead>
  <developer>
   <name>Stig Bakken</name>
@@ -23,31 +23,38 @@ short and long options.</description>
   <email>cellog@php.net</email>
   <active>yes</active>
  </helper>
- <date>2011-03-07</date>
- <time>20:20:13</time>
+
+ <date>2015-02-22</date>
+ <time>14:21:23</time>
  <version>
-  <release>1.3.1</release>
-  <api>1.3.0</api>
+  <release>1.4.0</release>
+  <api>1.4.0</api>
  </version>
  <stability>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license uri="http://www.php.net/license">BSD-2-Clause</license>
+ <license uri="http://opensource.org/licenses/bsd-license.php">BSD-2-Clause</license>
+
  <notes>
-* Change the minimum PEAR installer dep to be lower
+* Change license to BSD-2-Clause
+* Set minimum PHP version to 5.4.0
+* Mark static methods with "static" keyword
  </notes>
+
  <contents>
   <dir name="/">
-   <file md5sum="ed666da6b1c5d01c3ecbf1f588a70a60" name="Console/Getopt.php" role="php" />
+   <file name="Console/Getopt.php" role="php" />
   </dir>
  </contents>
+
  <compatible>
   <name>PEAR</name>
   <channel>pear.php.net</channel>
   <min>1.4.0</min>
-  <max>1.10.0</max>
+  <max>1.999.999</max>
  </compatible>
+
  <dependencies>
   <required>
    <php>
@@ -58,8 +65,45 @@ short and long options.</description>
    </pearinstaller>
   </required>
  </dependencies>
+
  <phprelease />
+
  <changelog>
+
+  <release>
+    <date>2015-02-22</date>
+    <version>
+     <release>1.3.1</release>
+     <api>1.3.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://opensource.org/licenses/bsd-license.php">BSD-2-Clause</license>
+    <notes>
+     * Change license to BSD-2-Clause
+     * Set minimum PHP version to 5.4.0
+     * Mark static methods with "static" keyword
+    </notes>
+  </release>
+
+  <release>
+    <date>2011-03-07</date>
+    <version>
+     <release>1.3.1</release>
+     <api>1.3.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.php.net/license">PHP License</license>
+    <notes>
+     * Change the minimum PEAR installer dep to be lower
+    </notes>
+  </release>
+
   <release>
     <date>2010-12-11</date>
     <time>20:20:13</time>
@@ -76,6 +120,7 @@ short and long options.</description>
    * Implement Request #13140: [PATCH] to skip unknown parameters. [patch by rquadling, improved on by dufuz]
     </notes>
   </release>
+
   <release>
    <date>2007-06-12</date>
    <version>
