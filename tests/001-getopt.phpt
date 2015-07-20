@@ -6,7 +6,7 @@ require_once __DIR__ .  '/../Console/Getopt.php';
 PEAR::setErrorHandling(PEAR_ERROR_PRINT, "%s\n\n");
 
 function test($argstr, $optstr) {
-    $argv = split('[[:space:]]+', $argstr);
+    $argv = preg_split('/[[:space:]]+/', $argstr);
     if (PEAR::isError($options = Console_Getopt::getopt($argv, $optstr))) {
         return;
     }
