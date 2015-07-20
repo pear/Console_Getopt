@@ -6,7 +6,7 @@ Console_Getopt [bug 13140]
 $_SERVER['argv'] = $argv =
     array('--bob', '--foo' , '-bar', '--test', '-rq', 'thisshouldbehere');
 
-require_once __DIR__ . '/../Console/Getopt.php';
+require_once 'Console/Getopt.php';
 $cg = new Console_GetOpt();
 
 print_r($cg->getopt2($cg->readPHPArgv(), 't', array('test'), true));

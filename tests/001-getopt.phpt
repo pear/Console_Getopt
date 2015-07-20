@@ -2,7 +2,7 @@
 Console_Getopt
 --FILE--
 <?php
-require_once __DIR__ .  '/../Console/Getopt.php';
+require_once 'Console/Getopt.php';
 PEAR::setErrorHandling(PEAR_ERROR_PRINT, "%s\n\n");
 
 function test($argstr, $optstr) {

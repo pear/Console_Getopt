@@ -5,7 +5,7 @@ Console_Getopt [bug 10557]
 <?php
 $_SERVER['argv'] =
 $argv = array('hi', '-fjjohnston@mail.com', '--to', '--mailpack', '--debug');
-require_once __DIR__ . '/../Console/Getopt.php';
+require_once 'Console/Getopt.php';
 $ret = Console_Getopt::getopt(Console_Getopt::readPHPArgv(), 'f:t:',
 array('from=','to=','mailpack=','direction=','verbose','debug'));
 if(PEAR::isError($ret))
