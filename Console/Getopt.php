@@ -3,20 +3,17 @@
 /**
  * PHP Version 5
  *
- * Copyright (c) 1997-2004 The PHP Group
+ * Copyright (c) 2001-2015, The PEAR developers
  *
- * This source file is subject to version 3.0 of the PHP license,
+ * This source file is subject to the BSD-2-Clause license,
  * that is bundled with this package in the file LICENSE, and is
  * available through the world-wide-web at the following url:
- * http://www.php.net/license/3_0.txt.
- * If you did not receive a copy of the PHP license and are unable to
- * obtain it through the world-wide-web, please send a note to
- * license@php.net so we can mail you a copy immediately.
+ * http://opensource.org/licenses/bsd-license.php.
  *
  * @category Console
  * @package  Console_Getopt
  * @author   Andrei Zmievski <andrei@php.net>
- * @license  http://www.php.net/license/3_0.txt PHP 3.0
+ * @license  http://opensource.org/licenses/bsd-license.php BSD-2-Clause
  * @version  CVS: $Id$
  * @link     http://pear.php.net/package/Console_Getopt
  */
@@ -29,7 +26,7 @@ require_once 'PEAR.php';
  * @category Console
  * @package  Console_Getopt
  * @author   Andrei Zmievski <andrei@php.net>
- * @license  http://www.php.net/license/3_0.txt PHP 3.0
+ * @license  http://opensource.org/licenses/bsd-license.php BSD-2-Clause
  * @link     http://pear.php.net/package/Console_Getopt
  */
 class Console_Getopt
