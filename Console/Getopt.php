@@ -128,8 +128,8 @@ class Console_Getopt
             }
         }
 
-        reset($args);
-        while (list($i, $arg) = each($args)) {
+        for ($i = 0; $i < count($args); $i++) {
+            $arg = $args[$i];
             /* The special element '--' means explicit end of
                options. Treat the rest of the arguments as non-options
                and end the loop. */
@@ -145,6 +145,7 @@ class Console_Getopt
                 $error = Console_Getopt::_parseLongOption(substr($arg, 2),
                                                           $long_options,
                                                           $opts,
+                                                          $i,
                                                           $args,
                                                           $skip_unknown);
                 if (PEAR::isError($error)) {
@@ -158,6 +159,7 @@ class Console_Getopt
                 $error = Console_Getopt::_parseShortOption(substr($arg, 1),
                                                            $short_options,
                                                            $opts,
+                                                           $i,
                                                            $args,
                                                            $skip_unknown);
                 if (PEAR::isError($error)) {
@@ -175,12 +177,13 @@ class Console_Getopt
      * @param string     $arg           Argument
      * @param string[]   $short_options Available short options
      * @param string[][] &$opts
-     * @param string[]   &$args
+     * @param int        &$argIdx
+     * @param string[]   $args
      * @param boolean    $skip_unknown suppresses Console_Getopt: unrecognized option
      *
      * @return void
      */
-    protected static function _parseShortOption($arg, $short_options, &$opts, &$args, $skip_unknown)
+    protected static function _parseShortOption($arg, $short_options, &$opts, &$argIdx, $args, $skip_unknown)
     {
         for ($i = 0; $i < strlen($arg); $i++) {
             $opt     = $arg{$i};
@@ -210,7 +213,8 @@ class Console_Getopt
                     if ($i + 1 < strlen($arg)) {
                         $opts[] = array($opt,  substr($arg, $i + 1));
                         break;
-                    } else if (list(, $opt_arg) = each($args)) {
+                    } else if (isset($args[++$argIdx])) {
+                        $opt_arg = $args[$argIdx];
                         /* Else use the next argument. */;
                         if (Console_Getopt::_isShortOpt($opt_arg)
                             || Console_Getopt::_isLongOpt($opt_arg)) {
@@ -260,11 +264,12 @@ class Console_Getopt
      * @param string     $arg          Argument
      * @param string[]   $long_options Available long options
      * @param string[][] &$opts
-     * @param string[]   &$args
+     * @param int        &$argIdx
+     * @param string[]   $args
      *
      * @return void|PEAR_Error
      */
-    protected static function _parseLongOption($arg, $long_options, &$opts, &$args, $skip_unknown)
+    protected static function _parseLongOption($arg, $long_options, &$opts, &$argIdx, $args, $skip_unknown)
     {
         @list($opt, $opt_arg) = explode('=', $arg, 2);
 
@@ -305,9 +310,12 @@ class Console_Getopt
                 if (substr($long_opt, -2) != '==') {
                     /* Long option requires an argument.
                        Take the next argument if one wasn't specified. */;
-                    if (!strlen($opt_arg) && !(list(, $opt_arg) = each($args))) {
-                        $msg = "Console_Getopt: option requires an argument --$opt";
-                        return PEAR::raiseError($msg);
+                    if (!strlen($opt_arg)) {
+                        if (!isset($args[++$argIdx])) {
+                            $msg = "Console_Getopt: option requires an argument --$opt";
+                            return PEAR::raiseError($msg);
+                        }
+                        $opt_arg = $args[$argIdx];
                     }
 
                     if (Console_Getopt::_isShortOpt($opt_arg)
