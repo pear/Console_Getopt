@@ -31,5 +31,8 @@
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Console_Getopt",
         "source": "https://github.com/pear/Console_Getopt"
     },
-    "type": "library"
+    "type": "library",
+    "require": {
+        "phpunit/phpunit": "<=8"
+    }
 }
