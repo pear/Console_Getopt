@@ -18,11 +18,6 @@ matrix:
     - php: 5.4
       dist: precise
     
-install:
-  - pear list
-  - pear channel-update pear
-  - pear upgrade pear/pear
-
 script:
   - pear list
   - pear install --force package.xml
